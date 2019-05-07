@@ -57,6 +57,15 @@
   <ItemGroup>
     <Compile Include="Dog.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201905071949329_InitialCreate.cs" />
+    <Compile Include="Migrations\201905071949329_InitialCreate.Designer.cs">
+      <DependentUpon>201905071949329_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905072006195_datatable.cs" />
+    <Compile Include="Migrations\201905072006195_datatable.Designer.cs">
+      <DependentUpon>201905072006195_datatable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="Playdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +73,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905071949329_InitialCreate.resx">
+      <DependentUpon>201905071949329_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905072006195_datatable.resx">
+      <DependentUpon>201905072006195_datatable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

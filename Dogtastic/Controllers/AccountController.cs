@@ -152,7 +152,7 @@ namespace Dogtastic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, Zipcode = model.Zipcode, NumberOfEventsAttended = model.NumberOfEventsAttended, NumberOfDogs = model.NumberOfDogs };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, Zipcode = model.Zipcode, NumberOfEventsAttended = model.NumberOfEventsAttended, NumberOfDogsOwned = model.NumberOfDogsOwned };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

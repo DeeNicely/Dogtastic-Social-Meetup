@@ -83,7 +83,12 @@ namespace Dogtastic.Models
         public int Zipcode { get; set; }
 
         [Required]
+        [Display(Name = "How many events have you attend?")]
         public int NumberOfEventsAttended { get; set; }
+
+        [Required]
+        [Display(Name = "How many dogs do you have?")]
+        public int NumberOfDogsOwned { get; set; }
 
 
         [Required]
