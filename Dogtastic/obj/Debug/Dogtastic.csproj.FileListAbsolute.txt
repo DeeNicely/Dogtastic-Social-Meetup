@@ -1,0 +1,2 @@
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic\obj\Debug\Dogtastic.csprojAssemblyReference.cache
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic\obj\Debug\Dogtastic.csproj.CoreCompileInputs.cache

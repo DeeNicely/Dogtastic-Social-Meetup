@@ -1,0 +1,16 @@
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\DogtasticData.dll.config
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\DogtasticData.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\DogtasticData.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\EntityFramework.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\EntityFramework.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Data.csprojAssemblyReference.cache
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Data.csproj.CoreCompileInputs.cache
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Data.csproj.CopyComplete
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.pdb

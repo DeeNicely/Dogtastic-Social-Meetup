@@ -1,0 +1,15 @@
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\DogtasticContracts.dll.config
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\DogtasticContracts.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\DogtasticContracts.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\EntityFramework.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\EntityFramework.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\Dogtastic.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\Dogtastic.Contracts.csproj.CopyComplete
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\DogtasticContracts.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\DogtasticContracts.pdb
