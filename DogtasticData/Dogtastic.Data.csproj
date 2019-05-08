@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201905072006195_datatable.Designer.cs">
       <DependentUpon>201905072006195_datatable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905081948302_updatedog.cs" />
+    <Compile Include="Migrations\201905081948302_updatedog.Designer.cs">
+      <DependentUpon>201905081948302_updatedog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="Playdate.cs" />
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905072006195_datatable.resx">
       <DependentUpon>201905072006195_datatable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905081948302_updatedog.resx">
+      <DependentUpon>201905081948302_updatedog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

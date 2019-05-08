@@ -14,3 +14,9 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\obj\Debug\Dogtast
 C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\obj\Debug\Dogtastic.Services.csproj.CopyComplete
 C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\obj\Debug\Dogtastic.Services.dll
 C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\obj\Debug\Dogtastic.Services.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\bin\Debug\DogtasticData.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\bin\Debug\DogtasticModels.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\bin\Debug\DogtasticData.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\bin\Debug\DogtasticData.dll.config
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\bin\Debug\DogtasticModels.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.Services\bin\Debug\DogtasticModels.dll.config

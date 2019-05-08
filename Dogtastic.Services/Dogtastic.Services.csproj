@@ -58,7 +58,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="DogService.cs" />
     <None Include="packages.config" />
+    <Compile Include="ParentService.cs" />
+    <Compile Include="PlaydateService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DogtasticData\Dogtastic.Data.csproj">
+      <Project>{9BEB60C3-019A-44F2-8ED2-711D10837C7C}</Project>
+      <Name>Dogtastic.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DogtasticModels\Dogtastic.Models.csproj">
+      <Project>{6174179E-2025-43E3-AD8E-2F0C18D2EF78}</Project>
+      <Name>Dogtastic.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

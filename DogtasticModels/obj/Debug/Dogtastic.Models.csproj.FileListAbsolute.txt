@@ -13,3 +13,7 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\obj\Debug\Dogtastic.
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\obj\Debug\Dogtastic.Models.csproj.CopyComplete
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\obj\Debug\DogtasticModels.dll
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\obj\Debug\DogtasticModels.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\obj\Debug\Dogtastic.Models.csprojAssemblyReference.cache
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\bin\Debug\DogtasticData.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\bin\Debug\DogtasticData.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticModels\bin\Debug\DogtasticData.dll.config

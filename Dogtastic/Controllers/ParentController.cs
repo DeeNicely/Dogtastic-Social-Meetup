@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Dogtastic.Controllers
 {
-    public class DogtasticController : Controller
+    public class ParentController : Controller
     {
-        // GET: Dogtastic
+        // GET: Parent
         public ActionResult Index()
         {
             return View();
