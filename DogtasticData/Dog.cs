@@ -12,8 +12,8 @@ namespace DogtasticData
     public class Dog
     {
         [Key]
-        public Guid UserID { get; set; }
         public int DogID { get; set; }
+        public Guid UserID { get; set; }
 
         [Required]
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]

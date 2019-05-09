@@ -14,7 +14,3 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Da
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Data.csproj.CopyComplete
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.dll
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.pdb
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.InitialCreate.resources
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Data.csproj.GenerateResource.cache
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.datatable.resources
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.updatedog.resources

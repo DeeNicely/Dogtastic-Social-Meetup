@@ -239,6 +239,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Dog\Create.cshtml" />
+    <Content Include="Views\Dog\Index.cshtml" />
+    <Content Include="Views\Dog\Details.cshtml" />
+    <Content Include="Views\Dog\Edit.cshtml" />
+    <Content Include="Views\Dog\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

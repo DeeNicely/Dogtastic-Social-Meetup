@@ -1,0 +1,57 @@
+﻿@model DogtasticModels.DogDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DogDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DogID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DogSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogSize)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DogID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DogCreate.cs" />
+    <Compile Include="DogDetail.cs" />
+    <Compile Include="DogEdit.cs" />
+    <Compile Include="DogListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
