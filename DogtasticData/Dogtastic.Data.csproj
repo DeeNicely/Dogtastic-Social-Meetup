@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201905141749247_stuff.Designer.cs">
       <DependentUpon>201905141749247_stuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905151851319_createTest.cs" />
+    <Compile Include="Migrations\201905151851319_createTest.Designer.cs">
+      <DependentUpon>201905151851319_createTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="Playdate.cs" />
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905141749247_stuff.resx">
       <DependentUpon>201905141749247_stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905151851319_createTest.resx">
+      <DependentUpon>201905151851319_createTest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

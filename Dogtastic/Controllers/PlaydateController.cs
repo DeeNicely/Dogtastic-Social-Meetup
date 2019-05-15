@@ -29,6 +29,12 @@ namespace Dogtastic.Controllers
         // GET
         public ActionResult Create()
         {
+            var svcDog = CreateDogService();
+            var svcParent = CreateParentService();
+
+            ViewBag.DogID = new SelectList(svcDog.GetDogs(), "DogID", "DogName");
+            ViewBag.ParentID = new SelectList(svcParent.GetParent(), "ParentID", "ParentName");
+
             return View();
         }
 
@@ -69,10 +75,10 @@ namespace Dogtastic.Controllers
                 {
                     UserID = detail.UserID,
                     PlaydateID = detail.PlaydateID,
-                    ParentName = detail.ParentName,
-                    DogName = detail.DogName,
-                    DogSize = detail.DogSize,
-                    AgeLevel = detail.AgeLevel,
+                    //ParentName = detail.ParentName,
+                    //DogName = detail.DogName,
+                    //DogSize = detail.DogSize,
+                    //AgeLevel = detail.AgeLevel,
                     EventDate = detail.EventDate,
                     AddressOfEvent = detail.AddressOfEvent,
                     TypeOfPlaydate = detail.TypeOfPlaydate,
@@ -128,6 +134,19 @@ namespace Dogtastic.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PlaydateService(userId);
+            return service;
+        }
+
+        private DogService CreateDogService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new DogService(userId);
+            return service;
+        }
+        private ParentService CreateParentService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ParentService(userId);
             return service;
         }
     }

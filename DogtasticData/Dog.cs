@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Dogtastic.Data
 {
+    public enum SizeOfDog { Toy, Small, Medium, Large };
+    public enum DogAge { Puppy, Young, GettingUpThere, Senior }
+
     public class Dog
     {
         [Key]

@@ -22,10 +22,11 @@ namespace Dogtastic.Services
                     {
                         UserID = _userId,
                         PlaydateID = model.PlaydateID,
-                        ParentName = model.ParentName,
-                        DogName = model.DogName,
-                        AgeLevel = model.AgeLevel,
-                        DogSize = model.DogSize,
+                        DogID = model.DogID,
+                        //ParentName = model.ParentName,
+                        //DogName = model.DogName,
+                        //AgeLevel = model.AgeLevel,
+                        //DogSize = model.DogSize,
                         EventDate = model.EventDate,
                         AddressOfEvent = model.AddressOfEvent,
                         TypeOfPlaydate = model.TypeOfPlaydate,
@@ -50,11 +51,13 @@ namespace Dogtastic.Services
                             e =>
                                 new PlaydateListItem
                                 {
+                                    UserID = e.UserID,
                                     PlaydateID = e.PlaydateID,
-                                    ParentName = e.ParentName,
-                                    DogName = e.DogName,
-                                    DogSize = e.DogSize,
-                                    AgeLevel = e.AgeLevel,
+                                    DogID = e.DogID,
+                                    //ParentName = e.ParentName,
+                                    //DogName = e.DogName,
+                                    //DogSize = e.DogSize,
+                                    //AgeLevel = e.AgeLevel,
                                     EventDate = e.EventDate,
                                     AddressOfEvent = e.AddressOfEvent,
                                     TypeOfPlaydate = e.TypeOfPlaydate,
@@ -92,10 +95,11 @@ namespace Dogtastic.Services
                         .Single(e => e.PlaydateID == model.PlaydateID && e.UserID == _userId);
                         entity.UserID = model.UserID;
                         entity.PlaydateID = model.PlaydateID;
-                        entity.ParentName = model.ParentName;
-                        entity.DogName = model.DogName;
-                        entity.DogSize = model.DogSize;
-                        entity.AgeLevel = model.AgeLevel;
+                        entity.DogID = model.DogID;
+                        //entity.ParentName = model.ParentName;
+                        //entity.DogName = model.DogName;
+                        //entity.DogSize = model.DogSize;
+                        //entity.AgeLevel = model.AgeLevel;
                         entity.EventDate = model.EventDate;
                         entity.AddressOfEvent = model.AddressOfEvent;
                         entity.TypeOfPlaydate = model.TypeOfPlaydate;

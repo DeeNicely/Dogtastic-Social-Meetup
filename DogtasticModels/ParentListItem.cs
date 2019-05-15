@@ -10,7 +10,9 @@ namespace Dogtastic.Models
     public class ParentListItem
     {
         public Guid UserID { get; set; }
+        public int DogID { get; set; }
         public int ParentID { get; set; }
+        public string ParentName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Zipcode { get; set; }

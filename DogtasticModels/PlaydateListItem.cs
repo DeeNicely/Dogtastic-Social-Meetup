@@ -16,6 +16,7 @@ namespace Dogtastic.Models
     {
         public Guid UserID { get; set; }
         public int PlaydateID { get; set; }
+        public int DogID { get; set; }
 
         [Required]
         [Display(Name = "Parent's Name")]

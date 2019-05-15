@@ -37,6 +37,8 @@
             @Html.EditorFor(model => model.AgeLevel, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
             
+            @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+
         </div>
     </div>
 

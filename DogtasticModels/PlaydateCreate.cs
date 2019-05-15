@@ -11,22 +11,28 @@ namespace Dogtastic.Models
     public class PlaydateCreate
     {
         [Key]
+        [Display(Name = "Parent's full name")]
         public Guid UserID { get; set; }
         public int PlaydateID { get; set; }
-        [Required]
-        [Display(Name = "Parent's Full Name")]
-        public string ParentName { get; set; }
+        public int DogID { get; set; }
+        public int ParentID { get; set; }
 
-        [Required]
-        [Display(Name = "Dog's Name")]
-        public string DogName { get; set; }
+        // Using virtual key to bring in the following properties.
+        // [Required]
+        // [Display(Name = "Parent's Full Name")]
+        // public string ParentName { get; set; }
+        // [Required]
+        // [Display(Name = "Dog's Name")]
+        // public string DogName { get; set; }
         [Required]
         [Display(Name = "What size is your dog?")]
         public SizeOfDog DogSize { get; set; }
         [Required]
         [Display(Name = "How old is your dog?")]
         public DogAge AgeLevel { get; set; }
+
         [Required]
+        [DataType(DataType.Date)]
         public DateTimeOffset EventDate { get; set; }
 
         [Required]
