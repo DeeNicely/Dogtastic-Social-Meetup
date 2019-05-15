@@ -5,28 +5,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DogtasticData
-{ 
+namespace Dogtastic.Data
+{
+    public enum SizeOfDog { Toy, Small, Medium, Large };
+    public enum DogAge { Puppy, Young, GettingUpThere, Senior }
     public enum PlaydateType { OneOnOne, ParkAndPlay, GroupPlay, HikingTrail };
 
     public class Playdate
     {
         [Key]
+        public Guid UserID { get; set; }
+        public int PlaydateID {get; set;}
         [Required]
-        public int PlaydateID { get; set; }
+        [Display(Name = "Parent's Full Name")]
+        public string ParentName { get; set; }
 
+        [Required]
+        [Display(Name = "Dog's Name")]
+        public string DogName { get; set; }
+        [Required]
+        [Display(Name = "What size is your dog?")]
+        public SizeOfDog DogSize { get; set; }
+        [Required]
+        [Display(Name = "How old is your dog?")]
+        public DogAge AgeLevel { get; set; }
         [Required]
         public DateTimeOffset EventDate { get; set; }
 
         [Required]
-        public string Name { get; set; }
-
-        [Required]
-        public string Address { get; set; }
+        public string AddressOfEvent { get; set; }
 
         [Required]
         public PlaydateType TypeOfPlaydate { get; set; }
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
+
+        [Display(Name = "Leave a message for Host Parent")]
+        [StringLength(100, ErrorMessage = "Do not enter more than 100 characters")]
+
+        public string LeaveAMessage { get; set; }
+       
     }
 }

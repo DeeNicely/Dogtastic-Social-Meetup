@@ -1,6 +1,5 @@
 ﻿using Dogtastic.Data;
-using DogtasticData;
-using DogtasticModels;
+using Dogtastic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,17 +10,18 @@ namespace Dogtastic.Services
 {
     public class ParentService
     {
-        private readonly Guid _parentID;
-        public ParentService(Guid ParentID)
+        private readonly Guid _userId;
+        public ParentService(Guid userId)
         {
-            _parentID = ParentID;
+            _userId = userId;
         }
         public bool CreateParent(ParentCreate model)
         {
             var entity =
                     new Parent()
                     {
-                        ParentID = _parentID,
+                        UserID = _userId,
+                        ParentID = model.ParentID,
                         FirstName = model.FirstName,
                         LastName = model.LastName,
                         Zipcode = model.Zipcode,
@@ -41,11 +41,12 @@ namespace Dogtastic.Services
                 var query =
                     ctx
                         .Parents
-                        .Where(e => e.ParentID == _parentID)
+                        .Where(e => e.UserID == _userId)
                         .Select(
                             e =>
                                 new ParentListItem
                                 {
+                                    UserID = e.UserID,
                                     ParentID = e.ParentID,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
@@ -58,17 +59,18 @@ namespace Dogtastic.Services
                 return query.ToArray();
             }
         }
-        public ParentDetail GetParentByID(Guid id)
+        public ParentDetail GetParentByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Parents
-                        .Single(e => e.ParentID == id && e.ParentID == _parentID);
+                        .Single(e => e.ParentID == id && e.UserID == _userId);
                 return
                     new ParentDetail
                     {
+                        UserID = entity.UserID,
                         ParentID = entity.ParentID,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
@@ -86,31 +88,32 @@ namespace Dogtastic.Services
                 var entity =
                     ctx
                         .Parents
-                        .Single(e => e.ParentID == model.ParentID && e.ParentID == _parentID);
-
+                        .Single(e => e.UserID == model.UserID && e.UserID == _userId);
+                entity.UserID = model.UserID;
                 entity.ParentID = model.ParentID;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.Zipcode = model.Zipcode;
                 entity.NumberOfEventsAttended = model.NumberOfEventsAttended;
                 entity.NumberOfDogsOwned = model.NumberOfDogsOwned;
-                return ctx.SaveChanges() == 1;
+                     return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteParent(Guid ParentID)
+
+        public bool DeleteParent(int UserID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Parents
-                        .Single(e => e.ParentID == ParentID && e.UserId == _parentID);
+                        .Single(e => e.ParentID == UserID && e.UserID == _userId);
 
                 ctx.Parents.Remove(entity);
+
 
                 return ctx.SaveChanges() == 1;
             }
         }
-
     }
 }

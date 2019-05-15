@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DogtasticData
+namespace Dogtastic.Data
 {
     public class Parent
     {
         [Key]
-        [Required]
-        public Guid ParentID { get; set; }
+        public Guid UserID { get; set; }
+        public int ParentID { get; set; }
 
         [Required]
         [Display(Name = "First Name")]

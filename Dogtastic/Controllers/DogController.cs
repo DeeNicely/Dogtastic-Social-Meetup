@@ -1,8 +1,6 @@
 ﻿using Dogtastic.Data;
 using Dogtastic.Models;
 using Dogtastic.Services;
-using DogtasticData;
-using DogtasticModels;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -15,9 +13,13 @@ namespace Dogtastic.Controllers
     [Authorize]
     public class DogController : Controller
     {
+       
         // GET: Dog
         public ActionResult Index()
         {
+            //var dog = newDog(){ DogName = "Jackson"};
+            //return View(dog);
+
             //var model = new NoteListItem[0];
 
             var userId = Guid.Parse(User.Identity.GetUserId());

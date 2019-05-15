@@ -58,6 +58,14 @@
     <Compile Include="DogDetail.cs" />
     <Compile Include="DogEdit.cs" />
     <Compile Include="DogListItem.cs" />
+    <Compile Include="ParentCreate.cs" />
+    <Compile Include="ParentDetail.cs" />
+    <Compile Include="ParentEdit.cs" />
+    <Compile Include="ParentListItem.cs" />
+    <Compile Include="PlaydateCreate.cs" />
+    <Compile Include="PlaydateDetail.cs" />
+    <Compile Include="PlaydateEdit.cs" />
+    <Compile Include="PlaydateListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

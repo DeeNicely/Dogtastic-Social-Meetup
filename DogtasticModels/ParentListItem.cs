@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DogtasticModels
+namespace Dogtastic.Models
 {
     public class ParentListItem
     {
-        public Guid ParentID { get; set; }
+        public Guid UserID { get; set; }
+        public int ParentID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Zipcode { get; set; }

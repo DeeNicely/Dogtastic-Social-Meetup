@@ -1,0 +1,91 @@
+﻿@model Dogtastic.Models.PlaydateDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this playdate?</h3>
+<div>
+    <h4>PlaydateDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaydateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaydateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DogSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogSize)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfEvent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfPlaydate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfPlaydate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaveAMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaveAMessage)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

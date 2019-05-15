@@ -1,7 +1,5 @@
 ﻿using Dogtastic.Data;
 using Dogtastic.Models;
-using DogtasticData;
-using DogtasticModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +33,7 @@ namespace Dogtastic.Services
             }
         }
         public IEnumerable<DogListItem> GetDogs()
-            {
+        {
                 using (var ctx = new ApplicationDbContext())
                 {
                     var query =
@@ -55,7 +53,7 @@ namespace Dogtastic.Services
 
                     return query.ToArray();
                 }
-            }
+        }
         public DogDetail GetDogsById(int id)
         {
             using (var ctx = new ApplicationDbContext())

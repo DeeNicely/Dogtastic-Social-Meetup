@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DogtasticModels.DogListItem>
+﻿@model IEnumerable<Dogtastic.Models.DogListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -9,29 +9,30 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 @if (TempData.ContainsKey("SaveResult"))
 {
-<div class="alert alert-success fade in" role="alert">
-    @TempData["SaveResult"]
-    <button type="button" class="close" data-dismiss="alert">
-        <span>&times;</span>
-    </button>
-</div>
+    <div class="alert alert-success fade in" role="alert">
+        @TempData["SaveResult"]
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
 }
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DogName) 
-            </th>
+            @Html.DisplayNameFor(model => model.DogName)
+        </th>
         <th>
-            @Html.DisplayNameFor(model => model.DogSize) 
-            </th>
+            @Html.DisplayNameFor(model => model.DogSize)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.AgeLevel)
         </th>
         <th></th>
     </tr>
-    
+
 
     @foreach (var item in Model)
     {

@@ -5,10 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DogtasticData
+namespace Dogtastic.Data
 {
-    public enum SizeOfDog { Small, Medium, Large };
-    public enum DogAge { Puppy, Young, GettingUpThere, Senior }
     public class Dog
     {
         [Key]

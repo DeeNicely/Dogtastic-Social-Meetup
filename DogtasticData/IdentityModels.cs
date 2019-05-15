@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls.WebParts;
-using DogtasticData;
+using Dogtastic.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 

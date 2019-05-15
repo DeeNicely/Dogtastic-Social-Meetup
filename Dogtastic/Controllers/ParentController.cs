@@ -1,4 +1,6 @@
 ﻿using Dogtastic.Services;
+using Dogtastic.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +17,9 @@ namespace Dogtastic.Controllers
         {
             //var model = new ParentListItem[0];
 
-            var userID = Guid.Parse(User.Identity.GetParentID());
-            var service = new ParentService(userID);
-            var model = service.GetParents();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ParentService(userId);
+            var model = service.GetParent();
 
             return View(model);
         }
@@ -51,7 +53,7 @@ namespace Dogtastic.Controllers
         public ActionResult Details(int id)
         {
             var svc = CreateParentService();
-            var model = svc.GetParentById(id);
+            var model = svc.GetParentByID(id);
             return View(model);
         }
 
@@ -59,15 +61,16 @@ namespace Dogtastic.Controllers
         public ActionResult Edit(int id)
         {
             var service = CreateParentService();
-            var detail = service.GetParentById(id);
+            var detail = service.GetParentByID(id);
             var model =
                 new ParentEdit
                 {
+                    UserID = detail.UserID,
                     ParentID = detail.ParentID,
                     FirstName = detail.FirstName,
                     LastName = detail.LastName,
                     Zipcode = detail.Zipcode,
-                    NumberofEventsAttended = detail.NumberOfEventsAttended,
+                    NumberOfEventsAttended = detail.NumberOfEventsAttended,
                     NumberOfDogsOwned = detail.NumberOfDogsOwned
                 };
             return View(model);
@@ -78,7 +81,7 @@ namespace Dogtastic.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.DogID != id)
+            if (model.ParentID != id)
             {
                 ModelState.AddModelError("", "ID Mismatch");
                 return View(model);
@@ -98,8 +101,8 @@ namespace Dogtastic.Controllers
 
         public ActionResult Delete(int id)
         {
-            var svc = ParentService();
-            var model = svc.GetParentById(id);
+            var svc = CreateParentService();
+            var model = svc.GetParentByID(id);
             return View(model);
         }
         [HttpPost]
@@ -118,11 +121,10 @@ namespace Dogtastic.Controllers
 
         private ParentService CreateParentService()
         {
-            var userId = Guid.Parse(User.Identity.GetParentID());
+            var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ParentService(userId);
             return service;
         }
     }
 }
 
-}

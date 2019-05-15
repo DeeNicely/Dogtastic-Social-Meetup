@@ -244,12 +244,21 @@
     <Content Include="Views\Dog\Details.cshtml" />
     <Content Include="Views\Dog\Edit.cshtml" />
     <Content Include="Views\Dog\Delete.cshtml" />
+    <Content Include="Views\Parent\Create.cshtml" />
+    <Content Include="Views\Parent\Index.cshtml" />
+    <Content Include="Views\Parent\Details.cshtml" />
+    <Content Include="Views\Parent\Edit.cshtml" />
+    <Content Include="Views\Parent\Delete.cshtml" />
+    <Content Include="Views\Playdate\Create.cshtml" />
+    <Content Include="Views\Playdate\Details.cshtml" />
+    <Content Include="Views\Playdate\Delete.cshtml" />
+    <Content Include="Views\Playdate\Edit.cshtml" />
+    <Content Include="Views\Playdate\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Assets\" />
     <Folder Include="Views\Dogtastic\" />
-    <Folder Include="Views\Parent\" />
-    <Folder Include="Views\Playdate\" />
     <Folder Include="Views\Transaction\" />
   </ItemGroup>
   <ItemGroup>

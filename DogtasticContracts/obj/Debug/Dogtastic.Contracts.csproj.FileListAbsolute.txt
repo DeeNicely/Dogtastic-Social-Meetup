@@ -13,3 +13,4 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\Dogtast
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\Dogtastic.Contracts.csproj.CopyComplete
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\DogtasticContracts.dll
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\DogtasticContracts.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticContracts\obj\Debug\Dogtastic.Contracts.csprojAssemblyReference.cache
