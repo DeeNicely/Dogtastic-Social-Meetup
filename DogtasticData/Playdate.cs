@@ -21,7 +21,8 @@ namespace Dogtastic.Data
         
         
         [Required]
-        public DateTimeOffset EventDate { get; set; }
+        [Display(Name = "Date and Time of playdate.")]
+        public DateTime EventDate { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }
@@ -36,6 +37,7 @@ namespace Dogtastic.Data
 
         //virtual key
         public virtual Dog Dog { get; set; }
-       
+        public virtual Parent Parent { get; set; }
+
     }
 }

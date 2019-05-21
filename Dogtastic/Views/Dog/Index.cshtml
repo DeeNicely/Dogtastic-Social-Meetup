@@ -1,14 +1,14 @@
-﻿@model IEnumerable<Dogtastic.Models.DogListItem>
+﻿@model DogtasticModels.DogIndex
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>List Of Registered Dogs</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -22,21 +22,24 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DogName)
+            Dog Name
+            @*@Html.DisplayNameFor(model => model.Dogs.DogName)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DogSize)
+            Dog Size
+           @* @Html.DisplayNameFor(model => model.Dogs.DogSize)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AgeLevel)
+            Age Level
+           @* @Html.DisplayNameFor(model => model.Dogs.AgeLevel) *@
         </th>
-        <th></th>
+
     </tr>
+    
 
-
-    @foreach (var item in Model)
+    @foreach (var item in Model.Dogs)
     {
-        <tr>
+       <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.DogName)
             </td>
@@ -47,37 +50,16 @@
                 @Html.DisplayFor(modelItem => item.AgeLevel)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.DogID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.DogID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.DogID })
-            </td>
+                @Html.ActionLink("Details", "Details", new { id = item.DogID })
+                @if (Model.UserID == item.UserID)
+                {<span>|</span>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.DogID }) <span>|</span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.DogID })
+                }
+             </td>
         </tr>
-    }
+   }
 
 </table>
-<script language="javascript" type="text/javascript">
-    $(document).ready(function () {
-        $("i[data-toggle='star']")
-            .css({ "cursor": "pointer" })
-            .click(function (e) {
-                var target = $(e.target);
-                var noteId = target.attr("data-id");
-                var starSet = target.hasClass("glyphicon-star");
-
-                $.ajax({
-                    method: starSet ? "DELETE" : "PUT",
-                    url: "/api/note/" + noteId + "/star",
-                    data: null
-                })
-                    .done(function (r) {
-                        target.removeClass();
-                        target.addClass("glyphicon " + (starSet ? "glyphicon-star-empty" : "glyphicon-star"));
-                    })
-                    .fail(function (r) {
-                        alert("Failed to change star status");
-                    });
-            });
-    });
-</script>
 
 

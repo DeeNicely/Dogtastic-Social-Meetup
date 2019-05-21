@@ -57,10 +57,12 @@
     <Compile Include="DogCreate.cs" />
     <Compile Include="DogDetail.cs" />
     <Compile Include="DogEdit.cs" />
+    <Compile Include="DogIndex.cs" />
     <Compile Include="DogListItem.cs" />
     <Compile Include="ParentCreate.cs" />
     <Compile Include="ParentDetail.cs" />
     <Compile Include="ParentEdit.cs" />
+    <Compile Include="ParentIndex.cs" />
     <Compile Include="ParentListItem.cs" />
     <Compile Include="PlaydateCreate.cs" />
     <Compile Include="PlaydateDetail.cs" />

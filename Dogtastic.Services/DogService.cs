@@ -39,11 +39,12 @@ namespace Dogtastic.Services
                     var query =
                         ctx
                             .Dogs
-                            .Where(e => e.UserID == _userId)
+                           // .Where(e => e.UserID == _userId)
                             .Select(
                                 e =>
                                     new DogListItem
                                     {
+                                        UserID = e.UserID,
                                         DogID = e.DogID,
                                         DogName = e.DogName,
                                         DogSize = e.DogSize,
@@ -61,10 +62,11 @@ namespace Dogtastic.Services
                 var entity =
                     ctx
                         .Dogs
-                        .Single(e => e.DogID == id && e.UserID == _userId);
+                        .Single(e => e.DogID == id);
                 return
                     new DogDetail
                     {
+                        UserID = entity.UserID,
                         DogID = entity.DogID,
                         DogName = entity.DogName,
                         DogSize = entity.DogSize,
@@ -81,6 +83,7 @@ namespace Dogtastic.Services
                     ctx
                         .Dogs
                         .Single(e => e.DogID == model.DogID && e.UserID == _userId);
+                entity.UserID = model.UserID;
                 entity.DogName = model.DogName;
                 entity.DogSize = model.DogSize;
                 entity.AgeLevel = model.AgeLevel;

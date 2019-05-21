@@ -36,7 +36,7 @@ namespace Dogtastic.Data
         public int NumberOfDogsOwned { get; set; }
 
         [Display(Name = "Full Name")]
-        public string FullName
+        public string ParentName
         {
             get
             {

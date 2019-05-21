@@ -19,3 +19,5 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Da
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.idontknow.resources
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.stuff.resources
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.createTest.resources
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.DateTimePicker.resources
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.parentplaydateinfo.resources

@@ -14,7 +14,11 @@ namespace Dogtastic.Models
         [Display(Name = "Parent's full name")]
         public Guid UserID { get; set; }
         public int PlaydateID { get; set; }
+
+        [Display(Name = "Dog's Name")]
         public int DogID { get; set; }
+
+        [Display(Name = "Parent's Name")]
         public int ParentID { get; set; }
 
         // Using virtual key to bring in the following properties.
@@ -33,7 +37,8 @@ namespace Dogtastic.Models
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTimeOffset EventDate { get; set; }
+        [Display(Name = "Select a date")]
+        public DateTime EventDate { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }

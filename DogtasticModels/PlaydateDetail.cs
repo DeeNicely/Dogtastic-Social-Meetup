@@ -28,7 +28,7 @@ namespace Dogtastic.Models
         //[Display(Name = "How old is your dog?")]
         //public DogAge AgeLevel { get; set; }
         [Required]
-        public DateTimeOffset EventDate { get; set; }
+        public DateTime EventDate { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }

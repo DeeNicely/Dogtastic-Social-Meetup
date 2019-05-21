@@ -71,7 +71,7 @@
         @Html.DisplayFor(modelItem => item.LeaveAMessage)
     </td>
     <td>
-        Html.ActionLink("Edit", "Edit", new { id = item.PlaydateID }) |
+        @Html.ActionLink("Edit", "Edit", new { id = item.PlaydateID }) |
         @Html.ActionLink("Details", "Details", new { id = item.PlaydateID }) |
         @Html.ActionLink("Delete", "Delete", new { id = item.PlaydateID })
     </td>

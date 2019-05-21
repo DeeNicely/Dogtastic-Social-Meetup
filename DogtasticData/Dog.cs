@@ -12,7 +12,7 @@ namespace Dogtastic.Data
 
     public class Dog
     {
-        [Key]
+        
         public int DogID { get; set; }
         public Guid UserID { get; set; }
 

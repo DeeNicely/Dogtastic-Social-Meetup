@@ -1,35 +1,40 @@
-﻿@model IEnumerable<Dogtastic.Models.ParentListItem>
+﻿@model DogtasticModels.ParentIndex
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Registered parents</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@*@<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            First Name
+            @* @Html.DisplayNameFor(model => model.Parents.FirstName)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            Last Name
+            @* @Html.DisplayNameFor(model => model.LastName)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Zipcode)
+            Zip Code
+            @* @Html.DisplayNameFor(model => model.Zipcode)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NumberOfEventsAttended)
+            Number of Events Attended
+            @*@Html.DisplayNameFor(model => model.NumberOfEventsAttended)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NumberOfDogsOwned)
+            How many dogs do you own?
+            @* @Html.DisplayNameFor(model => model.NumberOfDogsOwned)*@
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.Parents)
     {
         <tr>
             @Html.HiddenFor(modelItem => item.ParentID)
@@ -49,11 +54,14 @@
                 @Html.DisplayFor(modelItem => item.NumberOfDogsOwned)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ParentID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ParentID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ParentID })
+                @Html.ActionLink("Details", "Details", new { id = item.UserID })
+                @if (Model.UserID == item.UserID)
+                {<span>|</span>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) <span>|</span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+                }
             </td>
         </tr>
-    }
+}
 
 </table>

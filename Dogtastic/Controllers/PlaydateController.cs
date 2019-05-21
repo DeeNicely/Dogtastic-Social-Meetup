@@ -17,8 +17,6 @@ namespace Dogtastic.Controllers
         // GET: Playdate
         public ActionResult Index()
         {
-            //var model = new NoteListItem[0];
-
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PlaydateService(userId);
             var model = service.GetPlaydates();
@@ -33,7 +31,7 @@ namespace Dogtastic.Controllers
             var svcParent = CreateParentService();
 
             ViewBag.DogID = new SelectList(svcDog.GetDogs(), "DogID", "DogName");
-            ViewBag.ParentID = new SelectList(svcParent.GetParent(), "ParentID", "ParentName");
+            ViewBag.UserID = new SelectList(svcParent.GetParents(), "UserID", "ParentName");
 
             return View();
         }
@@ -68,6 +66,11 @@ namespace Dogtastic.Controllers
 
         public ActionResult Edit(int id)
         {
+            var svcDog = CreateDogService();
+            var svcParent = CreateParentService();
+            ViewBag.DogID = new SelectList(svcDog.GetDogs(), "DogID", "DogName");
+            ViewBag.UserID = new SelectList(svcParent.GetParents(), "UserID", "ParentName");
+
             var service = CreatePlaydateService();
             var detail = service.GetPlaydatesById(id);
             var model =
@@ -75,6 +78,7 @@ namespace Dogtastic.Controllers
                 {
                     UserID = detail.UserID,
                     PlaydateID = detail.PlaydateID,
+                    DogID = detail.DogID,
                     //ParentName = detail.ParentName,
                     //DogName = detail.DogName,
                     //DogSize = detail.DogSize,

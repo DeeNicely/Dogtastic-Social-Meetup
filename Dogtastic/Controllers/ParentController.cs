@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DogtasticModels;
 
 namespace Dogtastic.Controllers
 {
@@ -19,7 +20,8 @@ namespace Dogtastic.Controllers
 
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ParentService(userId);
-            var model = service.GetParent();
+            var parents = service.GetParents();
+            var model = new ParentIndex(userId,parents);
 
             return View(model);
         }
@@ -50,7 +52,7 @@ namespace Dogtastic.Controllers
 
             return View(model);
         }
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
             var svc = CreateParentService();
             var model = svc.GetParentByID(id);
@@ -58,7 +60,7 @@ namespace Dogtastic.Controllers
         }
 
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(Guid id)
         {
             var service = CreateParentService();
             var detail = service.GetParentByID(id);
@@ -77,11 +79,11 @@ namespace Dogtastic.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, ParentEdit model)
+        public ActionResult Edit(Guid id, ParentEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.ParentID != id)
+            if (model.UserID != id)
             {
                 ModelState.AddModelError("", "ID Mismatch");
                 return View(model);
@@ -99,7 +101,7 @@ namespace Dogtastic.Controllers
             return View(model);
         }
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete(Guid id)
         {
             var svc = CreateParentService();
             var model = svc.GetParentByID(id);

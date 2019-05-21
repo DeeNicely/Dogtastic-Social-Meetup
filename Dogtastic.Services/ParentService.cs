@@ -34,14 +34,14 @@ namespace Dogtastic.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<ParentListItem> GetParent()
+        public IEnumerable<ParentListItem> GetParents()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Parents
-                        .Where(e => e.UserID == _userId)
+                        //.Where(e => e.UserID == _userId)
                         .Select(
                             e =>
                                 new ParentListItem
@@ -52,21 +52,23 @@ namespace Dogtastic.Services
                                     LastName = e.LastName,
                                     Zipcode = e.Zipcode,
                                     NumberOfEventsAttended = e.NumberOfEventsAttended,
-                                    NumberOfDogsOwned = e.NumberOfDogsOwned
+                                    NumberOfDogsOwned = e.NumberOfDogsOwned,
+                                   // ParentName = $"{e.FirstName} {e.LastName}"
                                 }
                         );
 
                 return query.ToArray();
             }
         }
-        public ParentDetail GetParentByID(int id)
+        public ParentDetail GetParentByID(Guid id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Parents
-                        .Single(e => e.ParentID == id && e.UserID == _userId);
+                      .Single(e => e.UserID == id );
+                   //   .Single(e => e.UserID == _userId);
                 return
                     new ParentDetail
                     {

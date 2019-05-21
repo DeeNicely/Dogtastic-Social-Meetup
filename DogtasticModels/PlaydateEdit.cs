@@ -29,7 +29,7 @@ namespace Dogtastic.Models
         //public DogAge AgeLevel { get; set; }
 
         [Required]
-        public DateTimeOffset EventDate { get; set; }
+        public DateTime EventDate { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }

@@ -11,19 +11,26 @@
     <h4>ParentDetail</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.UserID)
-        </dt>
+        </dt>*@
 
         <dd>
             @Html.HiddenFor(model => model.UserID)
         </dd>
-        <dt>
+        @* <dt>
             @Html.DisplayNameFor(model => model.ParentID)
+        </dt>*@
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
         </dt>
 
         <dd>
-            @Html.HiddenFor(model => model.ParentID)
+            @Html.DisplayFor(model => model.FullName)
         </dd>
 
         <dt>
@@ -66,13 +73,7 @@
             @Html.DisplayFor(model => model.NumberOfDogsOwned)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
 
     </dl>
 

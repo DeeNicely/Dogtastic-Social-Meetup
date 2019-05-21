@@ -15,18 +15,18 @@
         <h4>Create A Playdate</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.PlaydateID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PlaydateID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
         <div class="form-group">
-            @Html.LabelFor(model => model.ParentID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @**  @Html.LabelFor(model => model.PlaydateID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PlaydateID, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+                </div> *@
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.ParentID, null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ParentID, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.UserID, null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -34,28 +34,23 @@
             @Html.LabelFor(model => model.DogID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.DogID, null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.DogID, "", new { @class = "text-danger" })
 
             </div>
         </div>
-        
+
         <div class="form-group">
             @Html.LabelFor(model => model.DogSize, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.DogSize, null, htmlAttributes: new { @class = "form-control" })
                 @Html.EnumDropDownListFor(x => x.DogSize, "Select Dog Size", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-
-                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
             </div>
-            </div>
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.AgeLevel, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AgeLevel, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.DropDownListFor(model => model.AgeLevel, null, htmlAttributes: new { @class = "form-control" })
+                @Html.EnumDropDownListFor(x => x.AgeLevel, "Select Age", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-                @Html.EnumDropDownListFor(x => x.AgeLevel, "Select Age Level", new { @class = "form-control" })
 
             </div>
         </div>
@@ -63,9 +58,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EventDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EventDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.EventDate, new { htmlAttributes = new { @class = "form-control date-picker" } })
                 @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-               
+
 
                 @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
             </div>
@@ -79,8 +74,6 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.TypeOfPlaydate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.TypeOfPlaydate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.DropDownListFor(model => model.TypeOfPlaydate, null, htmlAttributes: new { @class = "form-control"  })
                     @Html.EnumDropDownListFor(x => x.TypeOfPlaydate, "Select Type of Playdate", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
 
@@ -90,7 +83,8 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.LeaveAMessage, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.LeaveAMessage, new { htmlAttributes = new { @class = "form-control" } })
+                    @* @Html.EditorFor(model => model.LeaveAMessage, new { htmlAttributes = new { @class = "form-control" } }) *@
+                    @Html.TextAreaFor(model => model.LeaveAMessage, new { @class = "form-control", @rows = 8 })
                     @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
 
                 </div>
@@ -110,4 +104,7 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 }

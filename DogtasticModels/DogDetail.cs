@@ -10,6 +10,7 @@ namespace Dogtastic.Models
 {
     public class DogDetail
     {
+        public Guid UserID { get; set; }
         public int DogID { get; set; }
 
         [Display(Name = "Your dog's name.")]
@@ -21,9 +22,6 @@ namespace Dogtastic.Models
         [Display(Name = "How old is your dog?")]
         public DogAge AgeLevel { get; set; } 
 
-        [Display(Name = "Registration Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-        
         public override string ToString() => $"[{DogID}] {DogName}";
     }
 }

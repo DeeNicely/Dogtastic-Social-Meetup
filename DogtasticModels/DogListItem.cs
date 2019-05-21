@@ -10,6 +10,7 @@ namespace Dogtastic.Models
 {
     public class DogListItem
     {
+        public Guid UserID { get; set; }
         public int DogID { get; set; }
 
         [Display(Name ="Dog's name")]

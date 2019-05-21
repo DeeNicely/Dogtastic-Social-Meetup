@@ -1,6 +1,7 @@
 ﻿using Dogtastic.Data;
 using Dogtastic.Models;
 using Dogtastic.Services;
+using DogtasticModels;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,8 @@ namespace Dogtastic.Controllers
 
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new DogService(userId);
-            var model = service.GetDogs();
+            var dogs = service.GetDogs();
+            var model = new DogIndex(userId,dogs);
 
             return View(model);
         }
@@ -70,6 +72,7 @@ namespace Dogtastic.Controllers
             var model =
                 new DogEdit
                 {
+                    UserID = detail.UserID,
                     DogName = detail.DogName,
                     DogSize = detail.DogSize,
                     AgeLevel = detail.AgeLevel

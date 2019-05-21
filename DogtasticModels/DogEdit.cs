@@ -9,6 +9,7 @@ namespace Dogtastic.Models
 {
     public class DogEdit
     {
+        public Guid UserID { get; set; }
         public int DogID { get; set; }
         public string DogName { get; set; }
         public SizeOfDog DogSize { get; set; }

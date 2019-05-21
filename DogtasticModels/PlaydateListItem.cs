@@ -20,7 +20,7 @@ namespace Dogtastic.Models
 
         [Required]
         [Display(Name = "Parent's Name")]
-        public string ParentName { get; set; }
+        public string ParentName { get => FirstName + " " + LastName;  }
 
         [Display(Name = "Dog's name")]
         public string DogName { get; set; }
@@ -31,7 +31,7 @@ namespace Dogtastic.Models
         [Display(Name = "How old is your dog?")]
         public DogAge AgeLevel { get; set; }
         [Required]
-        public DateTimeOffset EventDate { get; set; }
+        public DateTime EventDate { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }
@@ -42,7 +42,8 @@ namespace Dogtastic.Models
         [Display(Name = "Leave a message for Host Parent")]
         [StringLength(100, ErrorMessage = "Do not enter more than 100 characters")]
         public string LeaveAMessage { get; set; }
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public override string ToString()
         {
             return base.ToString();

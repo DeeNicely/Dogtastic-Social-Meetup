@@ -73,6 +73,14 @@
     <Compile Include="Migrations\201905151851319_createTest.Designer.cs">
       <DependentUpon>201905151851319_createTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905201927590_DateTimePicker.cs" />
+    <Compile Include="Migrations\201905201927590_DateTimePicker.Designer.cs">
+      <DependentUpon>201905201927590_DateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905202014468_parentplaydateinfo.cs" />
+    <Compile Include="Migrations\201905202014468_parentplaydateinfo.Designer.cs">
+      <DependentUpon>201905202014468_parentplaydateinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="Playdate.cs" />
@@ -94,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905151851319_createTest.resx">
       <DependentUpon>201905151851319_createTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905201927590_DateTimePicker.resx">
+      <DependentUpon>201905201927590_DateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905202014468_parentplaydateinfo.resx">
+      <DependentUpon>201905202014468_parentplaydateinfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
