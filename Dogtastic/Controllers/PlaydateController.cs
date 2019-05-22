@@ -84,6 +84,7 @@ namespace Dogtastic.Controllers
                     //DogSize = detail.DogSize,
                     //AgeLevel = detail.AgeLevel,
                     EventDate = detail.EventDate,
+                    Timer = detail.Timer,
                     AddressOfEvent = detail.AddressOfEvent,
                     TypeOfPlaydate = detail.TypeOfPlaydate,
                     LeaveAMessage = detail.LeaveAMessage

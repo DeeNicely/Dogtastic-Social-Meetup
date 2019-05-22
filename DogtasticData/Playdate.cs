@@ -21,8 +21,14 @@ namespace Dogtastic.Data
         
         
         [Required]
-        [Display(Name = "Date and Time of playdate.")]
+        [Display(Name = "Date of playdate.")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM YYYY}")]
         public DateTime EventDate { get; set; }
+
+        [Required]  
+        [Display(Name = "Time of playdate.")]
+        [DisplayFormat(DataFormatString = "{0:hh:mm tt}")]
+        public DateTime Timer { get; set; }  
 
         [Required]
         public string AddressOfEvent { get; set; }
@@ -31,7 +37,7 @@ namespace Dogtastic.Data
         public PlaydateType TypeOfPlaydate { get; set; }
 
         [Display(Name = "Leave a message for Host Parent")]
-        [StringLength(100, ErrorMessage = "Do not enter more than 100 characters")]
+        [StringLength(300, ErrorMessage = "Do not enter more than 300 characters")]
 
         public string LeaveAMessage { get; set; }
 

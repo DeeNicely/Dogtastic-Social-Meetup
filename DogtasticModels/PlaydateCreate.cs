@@ -38,7 +38,14 @@ namespace Dogtastic.Models
         [Required]
         [DataType(DataType.Date)]
         [Display(Name = "Select a date")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime EventDate { get; set; }
+
+        [Display(Name = "Time of the playdate.")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:hh:mm tt}")]
+        [Required]
+        public DateTime Timer { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }

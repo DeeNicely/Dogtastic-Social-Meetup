@@ -30,6 +30,9 @@
             @Html.DisplayNameFor(model => model.EventDate)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Timer)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.AddressOfEvent)
         </th>
         <th>
@@ -44,7 +47,7 @@
 @foreach (var item in Model) {
 <tr>
     <td>
-        @Html.DisplayFor(modelItem => item.PlaydateID)
+      * @Html.DisplayFor(modelItem => item.PlaydateID) 
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.ParentName)
@@ -60,6 +63,9 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.EventDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Timer)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.AddressOfEvent)

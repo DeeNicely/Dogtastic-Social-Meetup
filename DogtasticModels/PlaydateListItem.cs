@@ -30,8 +30,18 @@ namespace Dogtastic.Models
 
         [Display(Name = "How old is your dog?")]
         public DogAge AgeLevel { get; set; }
+
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
+        [Display(Name = "Date of playdate")]
+        [DataType(DataType.Date)]
         public DateTime EventDate { get; set; }
+
+        [Required]
+        [DisplayFormat(DataFormatString = "{0:hh:mm tt}")]
+        [Display(Name = "Time of Playdate")]
+        [DataType(DataType.Time)]
+        public DateTime Timer { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }

@@ -28,6 +28,7 @@ namespace Dogtastic.Services
                         //AgeLevel = model.AgeLevel,
                         //DogSize = model.DogSize,
                         EventDate = model.EventDate,
+                        Timer = model.Timer,
                         AddressOfEvent = model.AddressOfEvent,
                         TypeOfPlaydate = model.TypeOfPlaydate,
                         LeaveAMessage = model.LeaveAMessage
@@ -60,6 +61,7 @@ namespace Dogtastic.Services
                                     //DogSize = e.DogSize,
                                     //AgeLevel = e.AgeLevel,
                                     EventDate = e.EventDate,
+                                    Timer = e.Timer,
                                     AddressOfEvent = e.AddressOfEvent,
                                     TypeOfPlaydate = e.TypeOfPlaydate,
                                     LeaveAMessage = e.LeaveAMessage
@@ -81,9 +83,19 @@ namespace Dogtastic.Services
                     new PlaydateDetail
                     {
                         PlaydateID = entity.PlaydateID,
-                        
-
-                    };
+                        UserID = entity.UserID,
+                        DogID = entity.DogID,
+                        //ParentName = entity.ParentName,
+                        //DogName = model.DogName;
+                        //DogSize = model.DogSize;
+                        //AgeLevel = model.AgeLevel;
+                        EventDate = entity.EventDate,
+                        Timer = entity.Timer,
+                        AddressOfEvent = entity.AddressOfEvent,
+                        TypeOfPlaydate = entity.TypeOfPlaydate,
+                        LeaveAMessage = entity.LeaveAMessage,
+                                                          
+            };
             }
         }
         public bool UpdatePlaydate(PlaydateEdit model)
@@ -102,6 +114,7 @@ namespace Dogtastic.Services
                         //entity.DogSize = model.DogSize;
                         //entity.AgeLevel = model.AgeLevel;
                         entity.EventDate = model.EventDate;
+                        entity.Timer = model.Timer;
                         entity.AddressOfEvent = model.AddressOfEvent;
                         entity.TypeOfPlaydate = model.TypeOfPlaydate;
                         entity.LeaveAMessage = model.LeaveAMessage;

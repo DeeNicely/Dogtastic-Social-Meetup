@@ -1,0 +1,86 @@
+﻿@model Dogtastic.Models.PlaydateDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Playdate Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaydateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaydateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DogSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogSize)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfEvent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfPlaydate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfPlaydate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaveAMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaveAMessage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

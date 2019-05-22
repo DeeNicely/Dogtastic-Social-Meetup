@@ -14,21 +14,31 @@ namespace Dogtastic.Models
         public int PlaydateID { get; set; }
         public int DogID { get; set; }
 
-        //[Required]
-        //[Display(Name = "Parent's Full Name")]
-        //public string ParentName { get; set; }
-
-        //[Required]
-        //[Display(Name = "Dog's Name")]
-        //public string DogName { get; set; }
-        //[Required]
-        //[Display(Name = "What size is your dog?")]
-        //public SizeOfDog DogSize { get; set; }
-        //[Required]
-        //[Display(Name = "How old is your dog?")]
-        //public DogAge AgeLevel { get; set; }
         [Required]
+        [Display(Name = "Parent's Full Name")]
+        public string ParentName { get; set; }
+
+        [Required]
+        [Display(Name = "Dog's Name")]
+        public string DogName { get; set; }
+        [Required]
+        [Display(Name = "What size is your dog?")]
+        public SizeOfDog DogSize { get; set; }
+        [Required]
+        [Display(Name = "How old is your dog?")]
+        public DogAge AgeLevel { get; set; }
+
+        [Required]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
+        [Display(Name = "Date of Playdate")]
+        [DataType(DataType.Date)]
         public DateTime EventDate { get; set; }
+
+        [Required]
+        [Display(Name = "Time of playdate")]
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:hh:mm tt}")]
+        public DateTime Timer { get; set; }
 
         [Required]
         public string AddressOfEvent { get; set; }

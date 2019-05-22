@@ -57,29 +57,17 @@
   <ItemGroup>
     <Compile Include="Dog.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201905092100393_InitialCreate.cs" />
-    <Compile Include="Migrations\201905092100393_InitialCreate.Designer.cs">
-      <DependentUpon>201905092100393_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201905212052493_InitialCreate.cs" />
+    <Compile Include="Migrations\201905212052493_InitialCreate.Designer.cs">
+      <DependentUpon>201905212052493_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905101644514_idontknow.cs" />
-    <Compile Include="Migrations\201905101644514_idontknow.Designer.cs">
-      <DependentUpon>201905101644514_idontknow.cs</DependentUpon>
+    <Compile Include="Migrations\201905221534190_initial.cs" />
+    <Compile Include="Migrations\201905221534190_initial.Designer.cs">
+      <DependentUpon>201905221534190_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905141749247_stuff.cs" />
-    <Compile Include="Migrations\201905141749247_stuff.Designer.cs">
-      <DependentUpon>201905141749247_stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905151851319_createTest.cs" />
-    <Compile Include="Migrations\201905151851319_createTest.Designer.cs">
-      <DependentUpon>201905151851319_createTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905201927590_DateTimePicker.cs" />
-    <Compile Include="Migrations\201905201927590_DateTimePicker.Designer.cs">
-      <DependentUpon>201905201927590_DateTimePicker.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905202014468_parentplaydateinfo.cs" />
-    <Compile Include="Migrations\201905202014468_parentplaydateinfo.Designer.cs">
-      <DependentUpon>201905202014468_parentplaydateinfo.cs</DependentUpon>
+    <Compile Include="Migrations\201905221737360_newdatastuff.cs" />
+    <Compile Include="Migrations\201905221737360_newdatastuff.Designer.cs">
+      <DependentUpon>201905221737360_newdatastuff.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Parent.cs" />
@@ -91,23 +79,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905092100393_InitialCreate.resx">
-      <DependentUpon>201905092100393_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905212052493_InitialCreate.resx">
+      <DependentUpon>201905212052493_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905101644514_idontknow.resx">
-      <DependentUpon>201905101644514_idontknow.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905221534190_initial.resx">
+      <DependentUpon>201905221534190_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905141749247_stuff.resx">
-      <DependentUpon>201905141749247_stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905151851319_createTest.resx">
-      <DependentUpon>201905151851319_createTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905201927590_DateTimePicker.resx">
-      <DependentUpon>201905201927590_DateTimePicker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905202014468_parentplaydateinfo.resx">
-      <DependentUpon>201905202014468_parentplaydateinfo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905221737360_newdatastuff.resx">
+      <DependentUpon>201905221737360_newdatastuff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

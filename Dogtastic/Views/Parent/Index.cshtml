@@ -6,9 +6,9 @@
 
 <h2>Registered parents</h2>
 
-@*@<p>
+<p>
         @Html.ActionLink("Create New", "Create")
-    </p>*@
+    </p>
 <table class="table">
     <tr>
         <th>
@@ -37,7 +37,7 @@
     @foreach (var item in Model.Parents)
     {
         <tr>
-            @Html.HiddenFor(modelItem => item.ParentID)
+            @*@Html.HiddenFor(modelItem => item.ParentID) *@
             <td>
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>

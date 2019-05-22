@@ -182,6 +182,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assets\cartoonPeopleMeeting.jpg" />
+    <Content Include="Content\Assets\DogsHikingJumbo.jpg" />
+    <Content Include="Content\Assets\help-dog-make-friends-2.jpg" />
+    <Content Include="Content\Assets\LadiesandPuppies.jpg" />
+    <Content Include="Content\Assets\Lakes+&amp;+Legends+Group+Photo+Dog+Days.jpg" />
+    <Content Include="Content\Assets\Mutts-and-Mates.jpeg" />
     <Content Include="Content\Bootstrap-Spacelab.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -222,6 +228,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\DogtasticSocialMeetup - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\i18n\jquery-ui-timepicker-addon-i18n.js" />
     <Content Include="Scripts\i18n\jquery-ui-timepicker-addon-i18n.min.js" />
@@ -336,7 +343,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Assets\" />
     <Folder Include="Views\Dogtastic\" />
     <Folder Include="Views\Transaction\" />
   </ItemGroup>

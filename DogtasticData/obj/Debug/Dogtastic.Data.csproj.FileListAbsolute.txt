@@ -16,8 +16,5 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticDat
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.pdb
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.InitialCreate.resources
 C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\Dogtastic.Data.csproj.GenerateResource.cache
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.idontknow.resources
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.stuff.resources
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.createTest.resources
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.DateTimePicker.resources
-C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.parentplaydateinfo.resources
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.initial.resources
+C:\Users\deeln\source\repos\DogtasticMeetUp\DogtasticData\obj\Debug\DogtasticData.Migrations.newdatastuff.resources
