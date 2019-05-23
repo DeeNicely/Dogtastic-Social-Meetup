@@ -68,6 +68,12 @@ p {
 #Playdateimage {
     background-image: url("http://visitwww.blacksprucedogsledding.com/uploads/3/4/5/8/34589627/whitneymclaren-6200_orig.jpg") !important;
 }
+#Dogimage {
+    background-image: url("https://winkgo.com/wp-content/uploads/2015/12/Border-Collies-Envy-and-Zain-Showing-Some-Love-Featured-720x374.jpg")!important;
+}
+#Edinfo {
+    margin: 60px 0px 0px 0px;
+}
 #footer {
     color: #c1ead7;
     position: absolute;
@@ -75,6 +81,18 @@ p {
 }
 a{
     font-weight: bold;
+}
+.col-md-10{
+    opacity: 0.5;
+}
+.control-label{
+    font-weight: bold;
+    color: white;
+    text-align: left !important;
+    text-shadow: 2px 2px black;
+}
+.form-group {
+    color: black;
 }
 .table {
     background-color: #6fdac278;

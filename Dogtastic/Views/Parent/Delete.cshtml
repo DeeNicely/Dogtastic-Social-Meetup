@@ -1,88 +1,90 @@
 ﻿@model Dogtastic.Models.ParentDetail
+    <body id="Parentimage">
+        @{
+            ViewBag.Title = "Delete";
+        }
 
-@{
-    ViewBag.Title = "Delete";
-}
+        <h2>Delete</h2>
 
-<h2>Delete</h2>
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>ParentDetail</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                @*<dt>
+                    @Html.DisplayNameFor(model => model.UserID)
+                </dt>*@
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>ParentDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        @*<dt>
-            @Html.DisplayNameFor(model => model.UserID)
-        </dt>*@
+                <dd>
+                    @Html.HiddenFor(model => model.UserID)
+                </dd>
+                @* <dt>
+                    @Html.DisplayNameFor(model => model.ParentID)
+                </dt>*@
 
-        <dd>
-            @Html.HiddenFor(model => model.UserID)
-        </dd>
-        @* <dt>
-            @Html.DisplayNameFor(model => model.ParentID)
-        </dt>*@
+                @* <dd>
+                    @Html.DisplayFor(model => model.ParentID)
+                </dd>*@
+                <dt>
+                    @Html.DisplayNameFor(model => model.FullName)
+                </dt>
 
-       @* <dd>
-            @Html.DisplayFor(model => model.ParentID)
-        </dd>*@
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FullName)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Zipcode)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Zipcode)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Zipcode)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Zipcode)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.NumberOfEventsAttended)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfEventsAttended)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.NumberOfEventsAttended)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfEventsAttended)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.NumberOfDogsOwned)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfDogsOwned)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfDogsOwned)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.NumberOfDogsOwned)
+                </dd>
 
 
 
-    </dl>
+            </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
         </div>
-    }
-</div>
+</body>
