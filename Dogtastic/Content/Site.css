@@ -1,7 +1,8 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: whitesmoke;
+    background-image: url(Assets/help-dog-make-friends-2.jpg);
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,4 +23,61 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+table td{
+    border: none !important;
+}
+
+table tr{
+    border: none !important;
+}
+
+table th{
+    border: none !important;
+}
+hr {
+    border: none !important;
+}
+.jumbotron {
+    background-color: #2aa58d5c;
+}
+p {
+    color: #c1ead7;
+    font-size: 14px;
+}
+.titles {
+    color: #ffffff;
+    font-weight: bold;
+}
+#logo{
+    text-align: center;
+    color: white;
+}
+.lead{
+    text-align: center;
+    color: black;
+}
+#Parentimage {
+    background-image: url("https://image.shutterstock.com/image-photo/happy-guy-sitting-on-sofa-260nw-499979860.jpg")!important;
+}
+#regparents{
+    margin: 60px 0px 0px 0px;
+}
+#Playdateimage {
+    background-image: url("http://visitwww.blacksprucedogsledding.com/uploads/3/4/5/8/34589627/whitneymclaren-6200_orig.jpg") !important;
+}
+#footer {
+    color: #c1ead7;
+    position: absolute;
+    bottom: 0;
+}
+a{
+    font-weight: bold;
+}
+.table {
+    background-color: #6fdac278;
+    border-radius: 15px;
+    color: white;
 }
