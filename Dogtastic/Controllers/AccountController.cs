@@ -13,6 +13,10 @@ using Dogtastic.Data;
 
 namespace Dogtastic.Controllers
 {
+    #if !DEBUG
+     [RequireHttps]
+
+    #endif
     [Authorize]
     public class AccountController : Controller
     {
