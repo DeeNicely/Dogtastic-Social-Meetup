@@ -1,8 +1,9 @@
 ﻿body {
-    background-image: url(Assets/help-dog-make-friends-2.jpg);
-    background-repeat:no-repeat;
-    background-position: top center;
-    background-size: 100%;
+    background: url(Assets/help-dog-make-friends-2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    /*background-repeat:no-repeat;*/
+    /*background-position: top center;*/
+    min-height: 100vh;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -28,6 +29,7 @@ textarea {
 
 table td{
     border: none !important;
+    color: white;
 }
 
 table tr{
@@ -92,10 +94,11 @@ a{
     text-shadow: 2px 2px black;
 }
 .form-group {
-    color: black;
+    color: white;
 }
 .table {
     background-color: #6fdac278;
     border-radius: 15px;
     color: white;
+    font-weight: bold;
 }

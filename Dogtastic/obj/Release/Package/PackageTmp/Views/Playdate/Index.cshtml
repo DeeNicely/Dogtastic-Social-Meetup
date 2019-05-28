@@ -1,87 +1,90 @@
 ﻿@model IEnumerable<Dogtastic.Models.PlaydateListItem>
+<body id="Playdateimage">
 
-@{
-    ViewBag.Title = "Index";
-}
+    @{
+        ViewBag.Title = "Index";
+    }
 
-<h2>Index</h2>
+    <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PlaydateID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ParentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DogName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DogSize)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AgeLevel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Timer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AddressOfEvent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TypeOfPlaydate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LeaveAMessage)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaydateID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgeLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Timer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressOfEvent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfPlaydate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveAMessage)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.PlaydateID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ParentName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.DogName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.DogSize)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.AgeLevel)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.EventDate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Timer)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.AddressOfEvent)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.TypeOfPlaydate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.LeaveAMessage)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.PlaydateID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.PlaydateID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.PlaydateID })
-    </td>
-</tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    * @Html.DisplayFor(modelItem => item.PlaydateID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ParentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogSize)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgeLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Timer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddressOfEvent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfPlaydate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LeaveAMessage)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PlaydateID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PlaydateID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PlaydateID })
+                </td>
+            </tr>
+        }
 
-</table>
+    </table>
+</body>

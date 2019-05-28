@@ -1,74 +1,75 @@
 ﻿@model Dogtastic.Models.ParentDetail
+    <body id="Parentimage">
+        @{
+            ViewBag.Title = "Details";
+        }
+        
+        <h2>Details</h2>
 
-@{
-    ViewBag.Title = "Details";
-}
+        <div>
+            <h4>ParentDetail</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                @* <dt>
+                    @Html.DisplayNameFor(model => model.ParentID)
+                </dt>
 
-<h2>Details</h2>
+                <dd>
+                    @Html.DisplayFor(model => model.ParentID)
+                </dd> *@
 
-<div>
-    <h4>ParentDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ParentID)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ParentID)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Zipcode)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Zipcode)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Zipcode)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.NumberOfEventsAttended)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Zipcode)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.NumberOfEventsAttended)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfEventsAttended)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.NumberOfDogsOwned)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfEventsAttended)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.NumberOfDogsOwned)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfDogsOwned)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.FullName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfDogsOwned)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.FullName)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </body>
