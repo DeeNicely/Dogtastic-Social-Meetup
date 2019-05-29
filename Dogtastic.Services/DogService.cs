@@ -21,7 +21,7 @@ namespace Dogtastic.Services
                     new Dog()
                     {
                         UserID = _userId,
-                        //   DogID = model.DogID,
+                        DogID = model.DogID,
                         DogName = model.DogName,
                         AgeLevel = model.AgeLevel,
                         DogSize = model.DogSize
@@ -32,6 +32,7 @@ namespace Dogtastic.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
         public IEnumerable<DogListItem> GetDogs()
         {
                 using (var ctx = new ApplicationDbContext())
@@ -55,7 +56,7 @@ namespace Dogtastic.Services
                     return query.ToArray();
                 }
         }
-        public DogDetail GetDogsById(int id)
+        public DogDetail GetDogById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

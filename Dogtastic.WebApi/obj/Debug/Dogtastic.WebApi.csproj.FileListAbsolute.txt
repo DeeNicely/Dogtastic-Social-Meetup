@@ -120,3 +120,5 @@ C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.WebApi\bin\Microsoft.CodeD
 C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.WebApi\obj\Debug\Dogtastic.WebApi.csproj.CopyComplete
 C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.WebApi\obj\Debug\Dogtastic.WebApi.dll
 C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.WebApi\obj\Debug\Dogtastic.WebApi.pdb
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.WebApi\bin\Swashbuckle.Core.dll
+C:\Users\deeln\source\repos\DogtasticMeetUp\Dogtastic.WebApi\bin\WebActivatorEx.dll

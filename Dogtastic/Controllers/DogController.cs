@@ -60,7 +60,7 @@ namespace Dogtastic.Controllers
         public ActionResult Details(int id)
         {
             var svc = CreateDogService();
-            var model = svc.GetDogsById(id);
+            var model = svc.GetDogById(id);
             return View(model);
         }
 
@@ -68,7 +68,7 @@ namespace Dogtastic.Controllers
         public ActionResult Edit(int id)
         {
             var service = CreateDogService();
-            var detail = service.GetDogsById(id);
+            var detail = service.GetDogById(id);
             var model =
                 new DogEdit
                 {
@@ -106,7 +106,7 @@ namespace Dogtastic.Controllers
         public ActionResult Delete(int id)
         {
             var svc = CreateDogService();
-            var model = svc.GetDogsById(id);
+            var model = svc.GetDogById(id);
             return View(model);
         }
         [HttpPost]

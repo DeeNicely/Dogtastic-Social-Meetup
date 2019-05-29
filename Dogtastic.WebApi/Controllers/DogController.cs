@@ -11,60 +11,60 @@ using System.Web.Http;
 namespace Dogtastic.WebApi.Controllers
 {
     [Authorize]
-    public class ParentController : ApiController
+    public class DogController : ApiController
     {
         public IHttpActionResult GetAll()
         {
-            ParentService parentService = CreateParentService();
-            var notes = parentService.GetParents();
-            return Ok(notes);
+            DogService dogService = CreateDogService();
+            var dogs = dogService.GetDogs();
+            return Ok(dogs);
         }
         public IHttpActionResult Get(int id)
         {
-            ParentService parentService = CreateParentService();
-            var parent = parentService.GetParentById(id);
-            return Ok(parent);
+            DogService dogService = CreateDogService();
+            var dog = dogService.GetDogById(id);
+            return Ok(dog);
         }
 
-        public IHttpActionResult Post(ParentCreate parent)
+        public IHttpActionResult Post(DogCreate dog)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateParentService();
+            var service = CreateDogService();
 
-            if (!service.CreateParent(parent))
+            if (!service.CreateDog(dog))
                 return InternalServerError();
 
             return Ok();
         }
 
-        public IHttpActionResult Put(ParentEdit parent)
+        public IHttpActionResult Put(DogEdit dog)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var service = CreateParentService();
+            var service = CreateDogService();
 
-            if (!service.UpdateParent(parent))
+            if (!service.UpdateDog(dog))
                 return InternalServerError();
             return Ok();
         }
 
         public IHttpActionResult Delete(int id)
         {
-            var service = CreateParentService();
+            var service = CreateDogService();
 
-            if (!service.DeleteParent(id))
+            if (!service.DeleteDog(id))
                 return InternalServerError();
             return Ok();
         }
 
-        private ParentService CreateParentService()
+        private DogService CreateDogService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var parentService = new ParentService(userId);
-            return parentService;
+            var dogService = new DogService(userId);
+            return dogService;
         }
     }
 }

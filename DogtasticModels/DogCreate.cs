@@ -25,6 +25,7 @@ namespace Dogtastic.Models
         [Required]
         [Display(Name = "How old is your dog?")]
         public DogAge AgeLevel { get; set; }
+        public int DogID { get; set; }
 
         public override string ToString()
         {
