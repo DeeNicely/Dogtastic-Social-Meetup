@@ -34,6 +34,12 @@ namespace Dogtastic.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public object GetParentById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<ParentListItem> GetParents()
         {
             using (var ctx = new ApplicationDbContext())
